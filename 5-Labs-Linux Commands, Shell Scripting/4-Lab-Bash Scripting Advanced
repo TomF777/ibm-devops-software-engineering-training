@@ -1,0 +1,169 @@
+## Metacharacters:
+
+`# - comments`
+
+`# this is a comment line`
+
+`; - command separator`
+
+`pwd;date`
+
+`* - wildcard used in filename expansion`
+
+`* - character matches any number of any character in filename patterns`
+
+`ls /etc/*.conf`
+
+`? - wildcard used in filename expansion`
+
+`? - character represents a single character in a filename pattern.`
+
+`ls /bin/?grep`
+
+<br>
+
+## Quoting
+
+Backslash `\` removes the meaning of the special character that follows it.
+
+`echo The symbol for multiplicaton is \*`
+
+A pair of single quotes escapes special meanings of all special characters within them (except another single quote).
+
+`echo 'Following are some special characters in shell - < > ; " ( ) \ [ ]  '`
+
+A pair of double quotes removes special meanings of all special characters within them except another double quote, variable substitution and command substitution..
+
+`echo "Current user name: $USERNAME"`
+
+## Working with variables
+
+List the variables already defined in the shell.
+ 
+ `set`
+
+Create new variables
+
+`balance=10000`
+
+Create an environment variable
+
+Environment variables are just like any other variable. They differ in the fact that they are copied to any child process created from the shell.
+
+Convert a regular variable to environment variable.
+
+`export balance`
+
+
+List environment variables
+
+`env`
+
+Display the value of a variable
+
+`echo "Current account balance is $balance"`
+
+Remove a variable
+
+`unset balance`
+
+
+## Command substitution
+
+ Store the output of the command `hostname -i` in a variable named `my_ip`:
+```bash
+my_ip=$(hostname -i)
+echo $my_ip
+```
+```bash
+echo "Running on host: $(hostname)"
+ls -l `which cat`
+```
+
+## I/O Redirection
+```
+Symbol	Meaning
+<	    Input Redirection
+>	    Output Redirecton
+>>	    Append Output
+2>	    Error Redirection
+```
+
+ Save the network configuration details into a file called output.txt
+ ```bash
+ ifconfig > output.txt
+ ```
+
+Save the output of the date command into the file output.txt.
+```bash
+ date > output.txt
+```
+
+Append output to a file
+```bash
+uname -a >> newoutput.txt
+date >> newoutput.txt
+```
+
+Display the contents of file newoutput.txt in all uppercase.
+```bash
+tr "[a-z]" "[A-Z]" < newoutput.txt
+```
+
+## Pipes and Filters
+
+Count the total number of files in your current directory.
+
+```bash
+ls | wc -l 
+```
+
+ Find the total disk space usage
+ ```bash
+ df -h|grep overlay
+ ```
+
+ List five largest files.
+ ```bash
+ ls -lS /bin | head -5
+ ```
+
+ ## Command line arguments
+
+Create a bsh script named `wish.sh`
+ ```bash
+ #! /bin/bash
+echo "Hi $1 $2"
+#$1 is the first argument passed to the script
+echo "$1 is your firstname"
+#$2 is the second argument passed to the script
+echo "$2 is your lastname"
+```
+
+Call the script:
+```bash
+./wish.sh Ramesh Sannareddy
+```
+
+Find the total disk space usage.
+Create a bash script named `dirinfo.sh`  that takes the directory name as an argument and prints the total number of directories and files contained in the directory.
+
+```bash
+#! /bin/bash
+dircount=$(find $1 -type d|wc -l)
+filecount=$(find $1 -type f|wc -l)
+echo "There are $dircount directories in the directory $1"
+echo "There are $filecount files in the directory $1"
+```
+
+Run the script with single argumet `/tmp`
+```
+./dirinfo.sh /tmp
+```
+
+
+Shell script named `latest_warnings.sh` that prints the latest 5 warnings from the file `/var/log/bootstrap.log`
+```bash
+#! /bin/bash
+grep warning /var/log/bootstrap.log|tail -5
+```
