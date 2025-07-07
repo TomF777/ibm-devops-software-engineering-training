@@ -1,0 +1,25 @@
+<html>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="./static/mywebscript.js"></script>
+    <div class="card">
+    <div class="card-body">
+        <div class="mb-3">
+            <img src="./static/books.jpeg" width="25px"/>
+            <label class="form-label">Book Name</label>
+            <input type="text" class="form-control" id="bookname">
+        </div>
+    
+        <div class="mb-3">
+            <img src="./static/author.png" width="25px"/>
+            <label class="form-label">Author</label>
+            <input type="text" class="form-control" id="author">
+        </div>
+        <div style="padding: 25px 25px 25px 25px;">
+        <button onclick="addBook()" class="btn btn-secondary">Add Book</button>        
+        <span id="updatemessage" style="padding-left: 25px;"></span>
+        </div>
+    
+        <div id="listofbooks" style="padding: 25px 25px 25px 25px;"></div>
+        </div>
+  </div>
+</html>
