@@ -336,4 +336,6 @@ Subjects which I've learned
 - Snyk for code scan
 - SQL Injections
 - Cross Site Scripting
-
+- 4.1 Code Practices
+- 3.13 Storing Secrets Securely
+- 4.4 Secure Development Environment
