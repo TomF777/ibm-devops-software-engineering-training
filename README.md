@@ -24,6 +24,8 @@ In course of my career pivot towards information technology I completed this tra
 
 - [13 Application Security for Developers and DevOps Professionals](#application-security-for-developers-and-devops-professionals)
 
+- [14 Monitoring and Observability for Development and DevOps](#monitoring-and-observability-for-development-and-devops)
+
 ## Introduction to DevOps
 
 Subjects which I've learned
