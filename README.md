@@ -339,3 +339,31 @@ Subjects which I've learned
 - Code Practices
 - Storing Secrets Securely
 - Secure Development Environment
+
+
+## Monitoring and Observability for Development and DevOps
+Subjects which I've learned:
+
+- Introduction to Monitoring
+- Types of Monitoring
+- Golden Signals of Monitoring
+- Difference between Monitoring and Evaluation
+- Components of a Monitoring System
+- Types of Metrics in a Monitoring System
+- Monitoring Systems and Techniques
+- Introduction to Synthetic Monitoring
+- Introduction to Application Monitoring 
+- Introduction to Prometheus
+- Introduction to Grafana
+- Using Visualization in Monitoring
+- Alerting in Monitoring
+- Introduction to Logging  
+- Distributed Logging and Tracing
+- Implementing Logging
+- Log Storage
+- Mezmo Overview
+- Observability and Concepts
+- The 3 Pillars of Observability
+- Introduction to Sampling
+- IBM Instana Overview
+- Introduction to Telemetry
