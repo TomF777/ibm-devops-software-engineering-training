@@ -34,40 +34,28 @@ consider the first line:
 It's possible to  use specific queries to analyze the data, and CloudVyzor has the `Supported Queries` section, which has a list of template queries that can be used for searching and analyzing the data.
 
 There are many Supported Queries, lets see a few of them with examples:
-- Simple term: `term` - This query can be used when we want to search for a specific word / term in the log file.
-<br>
-Type the term "Mozilla" in the search bar and see results.
+- Simple term: `term` - This query can be used when we want to search for a specific word / term in the log file. Type the term "Mozilla" in the search bar and see results.
 
-- Excluded term: `-term` - This query can be used when we want to search by omitting a specific word / term in the log file.
-<br>
-Type the term "-Firefox" in the search bar and see results.
+- Excluded term: `-term` - This query can be used when we want to search by omitting a specific word / term in the log file. Type the term "-Firefox" in the search bar and see results.
 
-- Several terms: `term1 term2` - This query can be used when two terms together need to be searched in the log file.
-<br>
-Lets search for the occurences of “Mozilla” “iPhone” in the log file.
+- Several terms: `term1 term2` - This query can be used when two terms together need to be searched in the log file. Lets search for the occurences of “Mozilla” “iPhone” in the log file.
 
-- Full phrase: `“phrase in quotes”` - This query can be used when it needs to search for a particular phrase in the log file.
-<br>
-Type `" 500 "` to see how many 500 error codes exist in the log file.
+- Full phrase: `“phrase in quotes”` - This query can be used when it needs to search for a particular phrase in the log file. Type `" 500 "` to see how many 500 error codes exist in the log file.
 
-- Excluded phrase: `-“excluded phrase”` - This query can be used when we need to search by omitting a particular phrase in the log file.
-<br>
-Type `-"200 553"` in the search bar to omit the error code 200 and the size 553.
+- Excluded phrase: `-“excluded phrase”` - This query can be used when we need to search by omitting a particular phrase in the log file. Type `-"200 553"` in the search bar to omit the error code 200 and the size 553.
 
-- `date=<date>` - This query can be used when we need to search for logs on a specific date.
-<br>
-Type `date=2018-11-16` in the sarch bar to see all logs for the specific date.
+- `date=<date>` - This query can be used when we need to search for logs on a specific date. Type `date=2018-11-16` in the sarch bar to see all logs for the specific date.
 
 - Timestamps - This query can be used when we need to search for logs at specific timestamps.
-<br>
+
 Examples queries for timestamps:
-<br>
+
 `timestamp>=”2015-01-10 12:10:12.226”`
-<br>
+
 `timestamp>”2015-01-10 12:10:12”`
-<br>
+
 `timestamp<=”2018-11-16”`
-<br>
+
 `timestamp<2018-11-18`
 
 
